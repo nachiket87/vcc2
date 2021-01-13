@@ -14,6 +14,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <%= render NavbarComponent.new %>
+      <%= yield %>
+    </div>
   </body>
 </html>
