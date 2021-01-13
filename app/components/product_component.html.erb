@@ -1,5 +1,10 @@
-<div class="flower-card <%= 'active' if @product.in_cart %>" data-controller="product" data-action="mouseover->product#addButton mouseout->product#removeButton">
-  <a class="btn btn-flat" href="#" id="<%= dom_id(@product) %>" data-product-target="button"><%= @product.in_cart ? 'Remove from cart' : 'Add to cart' %></a>
+<div class="flower-card <%= 'active' if @product.in_cart %>" 
+  data-controller="product" data-action="mouseover->product#addButton mouseout->product#removeButton">
+  <a class="btn btn-flat" href="#"  id="<%= dom_id @product %>"
+                          
+    data-id="<%= @product.id %>" data-reflex="click->ProductReflex#change_in_cart" data-product-target="button">
+    <%= @product.in_cart ? 'Remove from cart' : 'Add to cart' %>
+  </a>
   <%= cl_image_tag @product.photo.key %>
     <hr>
   <div class="flower-card-text">
