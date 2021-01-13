@@ -59,3 +59,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "stimulus_reflex", "~> 3.4"
 gem "view_component", require: "view_component/engine"
 gem 'cloudinary', '~> 1.16.0'
+gem 'open-uri'
