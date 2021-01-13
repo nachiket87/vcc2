@@ -11,19 +11,19 @@ require "open-uri"
 [
   {
     name: 'Blue Flower',
-    image_url: 'https://res.cloudinary.com/dgudbai8t/image/upload/v1610491221/blue-flower_ayazud.png',
+    image_url: 'https://raw.githubusercontent.com/VentionCo/vention-front-end-test/master/assets/blue-flower.png',
     rating: 4,
     price: 80.00
   },
   {
     name: 'Orange Flower',
-    image_url: 'https://res.cloudinary.com/dgudbai8t/image/upload/v1610491221/orange-flower_cl9byp.png',
+    image_url: 'https://raw.githubusercontent.com/VentionCo/vention-front-end-test/master/assets/orange-flower.png',
     rating: 3,
     price: 17.60
   },
   {
     name: 'Pink Flower',
-    image_url: 'https://res.cloudinary.com/dgudbai8t/image/upload/v1610491221/pink-flower_nunmi6.png',
+    image_url: 'https://raw.githubusercontent.com/VentionCo/vention-front-end-test/master/assets/pink-flower.png',
     rating: 5,
     price: 40.00
   }
