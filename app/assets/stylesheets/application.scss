@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+@import './products.scss';
+
+
+* {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  margin: 1rem;
+}
+
+
