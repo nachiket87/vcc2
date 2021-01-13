@@ -1,7 +1,9 @@
 # E-Commerce sample with Stimulus Reflex
 
-requires redis-server
+### Deployed Version: https://vss2.herokuapp.com/
 
-dev caching enabled
-
-will require cloudinary api key
+Ruby 2.7
+Rails 6.1
+Redis-server
+Dev caching enabled
+Will require Cloudinary api key for image uploads
