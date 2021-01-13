@@ -21,11 +21,17 @@ $layout-breakpoint-small: 769px;
   padding: 1rem;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
   border-radius: 5px;
+  hr {
+    color: grey;
+    opacity: 0.1;
+    width: 100%;
+  }
 }
 
 .flower-card .flower-card-text{
   padding-top: 1rem;
   display: flex;
+  font-weight: 200;
   flex-direction: column;
   align-items: center;
 
@@ -41,9 +47,48 @@ $layout-breakpoint-small: 769px;
   object-fit: cover;
 }
 
-.flower-card  {
-  font-size: 12px;
-  margin: 0;
+.flower-card:hover{
+  background-color: rgba(0,0,0,0.1);
+  opacity: 0.6;
 }
+
+.flower-card.active{
+  background-color: rgba(0,0,0,0.1);
+  opacity: 0.6;
+}
+
+.in-cart {
+  z-index: 100;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  font-size: 8px;
+  color: #fff;
+  text-align: center;
+  background: #000
+}
+
+.btn-flat {
+  color: white;
+  opacity: 0;
+  position: relative;
+  top: 40%;
+  z-index: 2;
+  padding: 8px 24px;
+  background: #1EDD88;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: #1BCB7F;
+  color: white;
+}
+
+
+
+
+
 
 
