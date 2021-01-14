@@ -1,2 +1,14 @@
-<h1>Products#new</h1>
-<p>Find me in app/views/products/new.html.erb</p>
+<div class="centered-forms">
+  <h2>Add a new product</h2>
+  <%= simple_form_for @product do |f| %>
+    <%= f.label :name, 'Name' %>
+    <%= f.input :name, label: false %>
+    <%= f.label :rating, 'Rating' %>
+    <%= f.input :rating, collection: 0..5, prompt: "Rate your own product", label: false %>
+    <%= f.label :price, 'Price' %>
+    <%= f.input :price, label: false, placeholder: '77.77' %>
+    <%= f.label :photo, 'Product Photo' %>
+    <%= f.input :photo, as: :file, label: false %>
+    <%= f.button :submit, class: 'nav-btn' %>
+  <% end %>
+</div>

@@ -1,6 +1,7 @@
 .navbar {
   display: flex;
   justify-content: space-between;
+  margin: 1em;
   align-items: center;
   background: white;
 }
@@ -24,6 +25,7 @@
 .nav-btn:hover {
   background: #1BCB7F;
   color: white;
+  cursor: pointer;
 }
 
 

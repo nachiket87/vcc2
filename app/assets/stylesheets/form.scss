@@ -1,0 +1,27 @@
+.centered-forms {
+  display: grid;
+  place-items: center;
+}
+
+input {
+  padding:10px;
+  margin: 10px 0;
+  width: 40vw;
+  overflow: hidden;
+  border:1px solid grey;
+  border-radius: 10px;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+input[type=number] {
+  width: 20vw;
+}
+
+select {
+  padding:10px;
+  border-radius: 10px;
+  margin: 10px 0;
+  overflow: hidden;
+  border:1px solid grey;
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
