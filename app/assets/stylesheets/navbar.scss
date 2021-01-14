@@ -1,14 +1,23 @@
+$layout-breakpoint-small: 265px;
+
 .navbar {
   display: flex;
   justify-content: space-between;
   margin: 1em;
   align-items: center;
   background: white;
+  @media(max-width: $layout-breakpoint-small){
+    flex-direction: column;
+  }
+    margin: 0.5em;
 }
 
 .logo {
   width: 40px;
   border-radius: 50%;
+  @media(max-width: $layout-breakpoint-small){
+    margin: 1em;
+  }
 }
 
 .nav-btn {

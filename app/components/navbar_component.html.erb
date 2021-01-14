@@ -1,8 +1,12 @@
 <div class="navbar"> 
- <%= link_to products_path do %>
+ <%= link_to root_path do %>
    <%= image_tag "https://res.cloudinary.com/dgudbai8t/image/upload/v1610575908/vention_bmm8pt.jpg", class: "logo" %> 
  <% end %>
  <div>
-   <%= link_to 'Add Product', new_product_path, class: 'nav-btn' %>
+   <% if on_index_page? %>
+     <%= link_to 'Add Product', new_product_path, class: 'nav-btn' %>
+   <% else %>
+     <%= link_to 'Home', root_path, class: 'nav-btn' %>
+   <% end %>
  </div>
 </div>
