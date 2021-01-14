@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  include CableReady::Broadcaster
   def index
     @products = Product.all
   end
@@ -8,10 +9,17 @@ class ProductsController < ApplicationController
   end
 
   def create
-    product = Product.new(product_params)
+    @product = Product.new(product_params)
+
     respond_to do |format|
-      if product.save
+      if @product.save
         format.html {redirect_to root_path, notice: "product saved!"}
+        cable_ready["products"].insert_adjacent_html(
+          selector: "#flower-container",
+          position: "afterbegin",
+          html: render_to_string(ProductComponent.new(product: @product), layout: false)
+        )
+        cable_ready.broadcast
       else
         format.html { render :new }
       end
