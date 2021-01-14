@@ -8,7 +8,7 @@
 - Rails 6.1.1
 - Redis-server
 - Dev caching enabled ( run rails dev:cache)
-- ~~- Cloudinary Api key for image uploads~~
+- Cloudinary Api key for image uploads
 
 #### To Start Development Server
 
