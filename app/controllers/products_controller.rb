@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
         )
         cable_ready.broadcast
       else
-        format.html { render :new }
+        format.html { broadcast_errors @product, product_params }
       end
     end
   end

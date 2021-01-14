@@ -63,3 +63,5 @@ gem 'open-uri'
 gem 'font-awesome-sass', '~> 5.15.1'
 gem "simple_form", "~> 5.0"
 gem 'acts_as_list'
+
+gem "optimism", "~> 0.4.0"
