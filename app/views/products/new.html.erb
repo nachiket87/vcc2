@@ -1,6 +1,6 @@
 <div class="centered-forms">
   <h2>Add a new product</h2>
-  <%= simple_form_for @product do |f| %>
+  <%= simple_form_for @product, remote: true do |f| %>
     <%= f.label :name, 'Name' %>
     <%= f.input :name, label: false %>
     <%= f.label :rating, 'Rating' %>
