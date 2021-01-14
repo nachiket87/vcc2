@@ -31,11 +31,19 @@ select {
   }
 }
 
-.error {
-  background: #c51244;
-  margin: 0 0 10px 0;
-  color: white;
-  border-radius: 10px;
-  text-align: center;
-  padding: 1px;
+.danger {
+  color: red;
+}
+
+.hide {
+  display: none;
+}
+
+.field.error > .hide {
+  display: block;
+}
+
+.field.error > input,
+.field.error > textarea {
+  background-color: rgba(255, 239, 213, 0.7);
 }

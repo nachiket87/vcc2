@@ -1,21 +1,30 @@
 <div class="centered-forms">
   <h2>Add a new product</h2>
+
   <%= simple_form_for @product, remote: true do |f| %>
-    <%= f.label :name, 'Name' %>
-    <%= f.input :name, label: false %>
-    <%= f.error_for :name %>
+    <%= f.container_for :name, class: "field" do %>
+      <%= f.label :name, 'Name' %>
+      <%= f.input :name, label: false %>
+      <%= f.error_for :name, class: "danger hide" %>
+    <% end %>
 
-    <%= f.label :rating, 'Rating' %>
-    <%= f.input :rating, collection: 0..5, prompt: "Rate your own product", label: false %>
-    <%= f.error_for :rating %>
+    <%= f.container_for :rating, class: "field" do %>
+      <%= f.label :rating, 'Rating' %>
+      <%= f.input :rating, collection: 0..5, prompt: "Rate your own product", label: false %>
+      <%= f.error_for :rating, class: "danger hide" %>
+    <% end %>
 
-    <%= f.label :price, 'Price' %>
-    <%= f.input :price, as: :float, label: false, placeholder: '77.77' %>
-    <%= f.error_for :price %>
+    <%= f.container_for :price, class: "field" do %>
+      <%= f.label :price, 'Price' %>
+      <%= f.input :price, as: :float, label: false, placeholder: '77.77' %>
+      <%= f.error_for :price, class: "danger hide" %>
+    <% end %>
 
-    <%= f.label :photo, 'Product Photo' %>
-    <%= f.input :photo, as: :file, label: false %>
-    <%= f.error_for :photo %>
+    <%= f.container_for :photo, class: "field" do %>
+      <%= f.label :photo, 'Product Photo' %>
+      <%= f.input :photo, as: :file, label: false %>
+      <%= f.error_for :photo, class: "danger hide" %>
+    <% end %>
 
     <%= f.button :submit, class: 'nav-btn' %>
   <% end %>
