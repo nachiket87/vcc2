@@ -14,7 +14,7 @@ class Product < ApplicationRecord
 
   after_update do
     cable_ready["products"].morph(
-      selector: dom_id(self),
+      selector: "#{dom_id(self)}-container",
       position: "afterbegin",
       html: render(ProductComponent.new(product: self), layout: false)
     )
