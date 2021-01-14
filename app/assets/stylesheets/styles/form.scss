@@ -30,3 +30,12 @@ select {
     width: 90vw;
   }
 }
+
+.error {
+  background: #c51244;
+  margin: 0 0 10px 0;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 1px;
+}
