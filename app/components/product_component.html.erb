@@ -1,8 +1,8 @@
-<div class="flower-outer-wrapper">
+<div class="flower-outer-wrapper" id="<%= dom_id(@product) %>-container"> 
   <span class="in-cart" <%= 'hidden' if !in_cart? %>> In Cart </span>
   <div class="flower-card"
-    data-controller="product" data-action="mouseover->product#addButton mouseout->product#removeButton">
-    <a class="btn btn-flat" href="#"  id="<%= dom_id @product %>"
+       data-controller="product" data-action="mouseover->product#addButton mouseout->product#removeButton">
+       <a class="btn btn-flat" href="#"  id="<%= dom_id @product %>"
       data-id="<%= @product.id %>" data-reflex="click->ProductReflex#change_in_cart" data-product-target="button">
       <%= in_cart? ? 'Remove from cart' : 'Add to cart' %>
     </a>
