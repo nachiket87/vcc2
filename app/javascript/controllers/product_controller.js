@@ -9,10 +9,10 @@ export default class extends Controller {
 
   addButton() {
     const button = this.buttonTarget;
-    button.style.opacity = 100;
+    button.style.display = "block";
   }
   removeButton() {
     const button = this.buttonTarget;
-    button.style.opacity = 0;
+    button.style.display = "none";
   }
 }
