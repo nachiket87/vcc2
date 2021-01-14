@@ -1,22 +1,25 @@
-<div class="flower-card"
-  data-controller="product" data-action="mouseover->product#addButton mouseout->product#removeButton">
+<div class="flower-outer-wrapper">
   <span class="in-cart" <%= 'hidden' if !in_cart? %>> In Cart </span>
-  <a class="btn btn-flat" href="#"  id="<%= dom_id @product %>"
-    data-id="<%= @product.id %>" data-reflex="click->ProductReflex#change_in_cart" data-product-target="button">
-    <%= in_cart? ? 'Remove from cart' : 'Add to cart' %>
-  </a>
-  <%= cl_image_tag @product.photo.key %>
-    <hr>
-  <div class="flower-card-text">
-    <h3> <%= @product.name %> </h3>
-    <span>$<%= converted_price %></span>
-    <div class="ratings">
-      <% @product.rating.times do %>
-        <i class="fas fa-star"></i>
-      <% end %>
-      <% (5 - @product.rating).times do %>
-        <i class="far fa-star"></i>
-      <% end %>
+  <div class="flower-card"
+    data-controller="product" data-action="mouseover->product#addButton mouseout->product#removeButton">
+    <a class="btn btn-flat" href="#"  id="<%= dom_id @product %>"
+      data-id="<%= @product.id %>" data-reflex="click->ProductReflex#change_in_cart" data-product-target="button">
+      <%= in_cart? ? 'Remove from cart' : 'Add to cart' %>
+    </a>
+    <%= cl_image_tag @product.photo.key %>
+      <hr>
+    <div class="flower-card-text">
+      <h3> <%= @product.name %> </h3>
+      <span>$<%= converted_price %></span>
+      <div class="ratings">
+        <% @product.rating.times do %>
+          <i class="fas fa-star"></i>
+        <% end %>
+        <% (5 - @product.rating).times do %>
+          <i class="far fa-star"></i>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
+
