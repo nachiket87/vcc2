@@ -1,24 +1,30 @@
+$layout-breakpoint-small: 265px;
+
 .navbar {
   display: flex;
   justify-content: space-between;
   margin: 1em;
   align-items: center;
   background: white;
+  @media(max-width: $layout-breakpoint-small){
+    flex-direction: column;
+  }
+    margin: 0.5em;
 }
 
 .logo {
   width: 40px;
   border-radius: 50%;
+  @media(max-width: $layout-breakpoint-small){
+    margin: 1em;
+  }
 }
-
 .nav-btn {
-  transition: background 0.3s ease;
-  color: #4A4A4A;
+  color: black;
   border: 1px solid #4A4A4A;
   padding: 0.5rem 2rem;
   border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
+  opacity: 0.7;
   transition: opacity 0.3s ease;
 }
 
@@ -27,5 +33,3 @@
   color: white;
   cursor: pointer;
 }
-
-

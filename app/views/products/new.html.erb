@@ -6,7 +6,7 @@
     <%= f.label :rating, 'Rating' %>
     <%= f.input :rating, collection: 0..5, prompt: "Rate your own product", label: false %>
     <%= f.label :price, 'Price' %>
-    <%= f.input :price, label: false, placeholder: '77.77' %>
+    <%= f.input :price, as: :float, label: false, placeholder: '77.77' %>
     <%= f.label :photo, 'Product Photo' %>
     <%= f.input :photo, as: :file, label: false %>
     <%= f.button :submit, class: 'nav-btn' %>

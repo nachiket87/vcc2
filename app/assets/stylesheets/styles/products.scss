@@ -22,6 +22,11 @@ $layout-breakpoint-small: 769px;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
   border-radius: 5px;
 
+  &--active {
+    background-color: rgba(0,0,0,0.1);
+    opacity: 0.6;
+  }
+
   hr {
     color: grey;
     opacity: 0.1;
@@ -38,33 +43,16 @@ $layout-breakpoint-small: 769px;
 
   img {
     width: 200px;
+    height: 200px;
     object-fit: cover;
   }
 }
-
 
 .flower-card:hover{
   background-color: rgba(0,0,0,0.1);
   opacity: 0.6;
 }
 
-.flower-card.active{
-  background-color: rgba(0,0,0,0.1);
-  opacity: 0.6;
-}
-
-.in-cart {
-  z-index: 100;
-  position: relative;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 50%;
-  font-size: 8px;
-  color: #fff;
-  text-align: center;
-  background: #000
-}
 
 .btn-flat {
   color: white;
@@ -82,9 +70,18 @@ $layout-breakpoint-small: 769px;
   color: white;
 }
 
-
-
-
-
-
-
+.in-cart {
+  z-index: 10;
+  position: relative;
+  right: 50%;
+  bottom: 5%;
+  width: 56px;
+  height: 56px;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  background-color: rgb(224,100,73);
+  line-height: 56px;
+  text-align: center;
+  border-radius: 50%;
+}

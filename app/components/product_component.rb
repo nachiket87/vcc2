@@ -11,4 +11,8 @@ class ProductComponent < ViewComponent::Base
     return @product.in_cart
   end
 
+  def converted_price
+    sprintf "%.2f", @product.price
+  end
+
 end
