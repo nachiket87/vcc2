@@ -3,12 +3,20 @@
   <%= simple_form_for @product, remote: true do |f| %>
     <%= f.label :name, 'Name' %>
     <%= f.input :name, label: false %>
+    <%= f.error_for :name %>
+
     <%= f.label :rating, 'Rating' %>
     <%= f.input :rating, collection: 0..5, prompt: "Rate your own product", label: false %>
+    <%= f.error_for :rating %>
+
     <%= f.label :price, 'Price' %>
     <%= f.input :price, as: :float, label: false, placeholder: '77.77' %>
+    <%= f.error_for :price %>
+
     <%= f.label :photo, 'Product Photo' %>
     <%= f.input :photo, as: :file, label: false %>
+    <%= f.error_for :photo %>
+
     <%= f.button :submit, class: 'nav-btn' %>
   <% end %>
 </div>
