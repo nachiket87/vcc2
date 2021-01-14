@@ -61,5 +61,5 @@ gem "view_component", require: "view_component/engine"
 gem 'cloudinary', '~> 1.16.0'
 gem 'open-uri'
 gem 'font-awesome-sass', '~> 5.15.1'
-
 gem "simple_form", "~> 5.0"
+gem 'acts_as_list'
