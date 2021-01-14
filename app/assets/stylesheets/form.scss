@@ -1,3 +1,5 @@
+$layout-breakpoint-small: 769px;
+
 .centered-forms {
   display: grid;
   place-items: center;
@@ -11,11 +13,11 @@ input {
   border:1px solid grey;
   border-radius: 10px;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  @media(max-width: $layout-breakpoint-small){
+    width: 90vw;
+  }
 }
 
-input[type=number] {
-  width: 20vw;
-}
 
 select {
   padding:10px;
@@ -24,4 +26,7 @@ select {
   overflow: hidden;
   border:1px solid grey;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  @media(max-width: $layout-breakpoint-small){
+    width: 90vw;
+  }
 }
