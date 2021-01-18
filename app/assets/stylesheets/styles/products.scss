@@ -7,10 +7,10 @@ $layout-breakpoint-small: 769px;
 .flower-container {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-gap: 1rem;
+  grid-gap: 2rem 1rem;
   @media(max-width: $layout-breakpoint-small){
     grid-template-columns: none;
-    grid-gap: none;
+    grid-gap: 1rem;
   }
 }
 
@@ -20,7 +20,7 @@ $layout-breakpoint-small: 769px;
   flex-direction: column;
   justify-content: center;
   padding: 1rem;
-  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
   border-radius: 5px;
 
   &--active {
