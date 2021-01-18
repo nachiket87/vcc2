@@ -15,7 +15,4 @@ export default class extends Controller {
     const button = this.buttonTarget;
     button.style.display = "none";
   }
-  disconnect() {
-    this.channel.unsubscribe();
-  }
 }
